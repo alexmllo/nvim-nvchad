@@ -1,9 +1,22 @@
-**This repo is supposed to used as config by NvChad users!**
+# Nvim configuration with NvChad
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+My Nvim configuration build on top of NvChad.
 
-# Credits
+Backup old nvim config.
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+```
+mv ~/.config/nvim ~/.config/nvim-old
+```
+Or remove old nvim config.
+```
+rm -rf ~/.config/nvim
+```
+Remove local/state and local/share
+```
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
+```
+Clone repo
+```
+git clone https://github.com/alexmllo/nvim-nvchad.git ~/.config/nvim && nvim
+```
