@@ -8,4 +8,5 @@ return {
     require("plugins.mason-lspconfig"),
     require("plugins.lazygit"),
     require("plugins.auto-session"),
+    require("plugins.noice"),
 }
