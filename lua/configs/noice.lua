@@ -1,4 +1,25 @@
 require("noice").setup({
+    routes = {
+        {
+            filter = {
+                event = "msg_show",
+                find = "# Config Change Detected",
+            },
+            opts = { skip = true },
+        },
+        {
+            filter = {
+                event = "msg_show",
+                kind = "",
+                find = "written",
+            },
+            opts = { skip = true },
+        },
+        {
+            view = "split",
+            filter = { event = "msg_show", min_height = 20 },
+        },
+    },
     lsp = {
         override = {
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,

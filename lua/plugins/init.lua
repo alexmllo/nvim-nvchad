@@ -9,4 +9,5 @@ return {
     require("plugins.lazygit"),
     require("plugins.auto-session"),
     require("plugins.noice"),
+    require("plugins.mini-indentscope"),
 }

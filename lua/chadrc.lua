@@ -24,6 +24,7 @@ M.ui = {
 }
 
 M.lsp = {
+    -- For using noice and notice
     signature = false,
 }
 

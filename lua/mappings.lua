@@ -13,7 +13,7 @@ map("n", "<leader>qs", "<cmd>SessionSave<CR>", { desc = "Save session for auto s
 map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
 -- Nvim-tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree", noremap = true, silent = true })
 
 -- Split windows
 map("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
