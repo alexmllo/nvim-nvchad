@@ -10,4 +10,6 @@ return {
     require("plugins.auto-session"),
     require("plugins.noice"),
     require("plugins.mini-indentscope"),
+    require("plugins.markdown-preview"),
+    require("plugins.trouble"),
 }
