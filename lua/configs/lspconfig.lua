@@ -24,6 +24,14 @@ for _, lsp in ipairs(default_servers) do
     })
 end
 
+require("lspconfig").terraformls.setup({})
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = { "*.tf", "*.tfvars" },
+    callback = function()
+        vim.lsp.buf.format()
+    end,
+})
+
 -- gopls with custom setup
 lspconfig.gopls.setup({
     on_attach = function(client, bufnr)
