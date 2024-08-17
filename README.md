@@ -20,3 +20,9 @@ Clone repo
 ```
 git clone https://github.com/alexmllo/nvim-nvchad.git ~/.config/nvim && nvim
 ```
+## LSP, linting & formatter
+Languages configured:
+- Python
+- C/C++
+- Go
+- Terraform
