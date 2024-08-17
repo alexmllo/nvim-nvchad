@@ -26,3 +26,4 @@ Languages configured:
 - C/C++
 - Go
 - Terraform
+- SQL (lsp)

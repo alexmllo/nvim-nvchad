@@ -20,6 +20,7 @@ local options = {
         "gotmpl",
         "gowork",
         "terraform",
+        "sql",
     },
 
     highlight = {
