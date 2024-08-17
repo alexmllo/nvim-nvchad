@@ -10,6 +10,7 @@ lspconfig.servers = {
     "lua_ls",
     "pyright",
     "gopls",
+    "terraformls",
 }
 
 -- list of servers configured with default config.
@@ -24,11 +25,17 @@ for _, lsp in ipairs(default_servers) do
     })
 end
 
+-- LSP setup for Terraform
 require("lspconfig").terraformls.setup({})
+
+-- Use terraform-fmt for formatting on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*.tf", "*.tfvars" },
     callback = function()
-        vim.lsp.buf.format()
+        -- Run terraform fmt
+        vim.cmd("silent! !terraform fmt %")
+        -- Save the file again, as terraform fmt might have modified it
+        vim.cmd("silent! write")
     end,
 })
 
