@@ -1,4 +1,15 @@
 require("noice").setup({
+    cmdline = {
+        view = "cmdline",
+        format = {
+            search_down = {
+                view = "cmdline",
+            },
+            search_up = {
+                view = "cmdline",
+            },
+        },
+    },
     routes = {
         {
             filter = {
@@ -29,8 +40,8 @@ require("noice").setup({
     },
     -- You can enable a preset for easier configuration
     presets = {
-        bottom_search = true, -- Use a classic bottom cmdline for search
-        command_palette = true, -- Position the cmdline and popupmenu together
+        bottom_search = false, -- Use a classic bottom cmdline for search
+        command_palette = false, -- Position the cmdline and popupmenu together
         long_message_to_split = true, -- Long messages will be sent to a split
         inc_rename = false, -- Enables an input dialog for inc-rename.nvim
         lsp_doc_border = false, -- Add a border to hover docs and signature help
